@@ -5,7 +5,7 @@ const restaurant = {
     },
     orders: [],
     getOrders: function () {
-        return this.orders
+        console.log(this.orders)
     }
 
 }
@@ -17,9 +17,19 @@ const chickenComboMeal = {
     drinkSize: "Medium"
 }
 
+const cheeseburgerComboMeal = {
+    sandwichType: "Double Cheeseburger",
+    fries: false,
+    drinkSize: "Large"
+}
+
 // Place an order
 restaurant.placeOrder(chickenComboMeal)
+restaurant.placeOrder(cheeseburgerComboMeal)
+
 
 // Invoke the function to return the list of all orders
-console.log(restaurant.getOrders())
+restaurant.getOrders()
+
 // Output all orders to the console using console.table()
+console.table(restaurant.orders)
